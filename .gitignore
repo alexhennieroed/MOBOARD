@@ -1,3 +1,9 @@
 # Unnecessary C files
 *.o
 *.s
+
+# Program file
+moboard
+
+# Other stuff
+*.txt
