@@ -1,0 +1,3 @@
+# Unnecessary C files
+*.o
+*.s
