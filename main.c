@@ -18,16 +18,13 @@ int main(int argc, char *argv[]) {
     if (!strcmp(argv[1], "-c")) {
         printf("Beginning CPA Problem...\n");
         int time1, time2;
+        printf("\n***Own Ship***\n");
         ship_t *own_ship = inputtoship(in_buffer);
-        printf("Time 1: ");
-        fgets(in_buffer, BUFF_SIZE, stdin);
-        time1 = strtol(in_buffer, NULL, 10);
+        printf("\n***Contact***\n");
         contact_t *contact1 = inputtocontact(in_buffer);
-        printf("Time 2: ");
-        fgets(in_buffer, BUFF_SIZE, stdin);
-        time2 = strtol(in_buffer, NULL, 10);
         contact_t *contact2 = inputtocontact(in_buffer);
-        cpa(own_ship, contact1, contact2, timechange());
+        printf("********************\n");
+        cpa(own_ship, contact1, contact2, timepassed(contact1->time, contact2->time));
         free(own_ship);
         free(contact1);
         free(contact2);
