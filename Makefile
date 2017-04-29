@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=
+CFLAGS= -lm
 DEPS = helpers.h
 OBJ = main.o helpers.o
 
